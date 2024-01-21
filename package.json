@@ -1,0 +1,48 @@
+{
+  "name": "ha-integrations-rest-api",
+  "version": "1.0.0",
+  "description": "HA integrations",
+  "author": "Mathias Reker",
+  "license": "MIT",
+  "main": "server.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:MathiasReker/ha-integrations.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MathiasReker/rest-api/issues"
+  },
+  "homepage": "https://github.com/MathiasReker/rest-api",
+  "scripts": {
+    "start": "node server.js --omit=dev",
+    "dev": "cross-env nodemon server.js",
+    "db:init": "node src/scripts/ddl.js",
+    "format": "eslint . --fix --ext .js",
+    "lint": "eslint . --ext .js"
+  },
+  "dependencies": {
+    "argon2": "^0.31.2",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.2",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongo-sanitize": "^1.1.0",
+    "mongoose": "^8.1.0",
+    "sanitize-html": "^2.11.0",
+    "sharp": "^0.33.2",
+    "chrome-aws-lambda": "10.1.0",
+    "puppeteer-core": "10.1.0"
+  },
+  "devDependencies": {
+    "puppeteer": "^21.7.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1"
+  }
+}
